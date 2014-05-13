@@ -1,6 +1,9 @@
+<!DOCTYPE>
 <html>
 <head>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<title>Example Index Page</title>
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 <body>
