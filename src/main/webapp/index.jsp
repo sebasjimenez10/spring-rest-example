@@ -1,4 +1,3 @@
-<!DOCTYPE>
 <html>
 <head>
 <title>Example Index Page</title>
