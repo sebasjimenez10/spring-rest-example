@@ -9,6 +9,7 @@
 
     <div ng-controller="MainCtrl">
         <h1>App name: {{app}}</h1>
+        <h3 ng-show="stripeMessage">Token creation status: {{stripeMessage}}</h3>
         
         <form stripe:form="saveCustomer">
             <p>Credit Card Number</p>
@@ -19,7 +20,7 @@
             <input type="text" size="2" data-stripe="exp-month"/>
             <p>Expiration Year</p>
             <input type="text" size="4" data-stripe="exp-year"/>
-            <button type="submit">Save</button>
+            <button type="submit">Pay!</button>
         </form>
 
     </div>

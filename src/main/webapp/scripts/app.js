@@ -3,5 +3,5 @@
 
 angular.module('app', ['stripe'])
     .config( function() {
-        Stripe.setPublishableKey('sk_test_d1o87gtp2OGsGXbBA9vMGnFW');
+        Stripe.setPublishableKey('pk_test_ERLhMS2uwqoka2PTFRImJonP');
     });
