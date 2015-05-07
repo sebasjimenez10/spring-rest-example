@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stripe Concept Test</title>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+</head>
+<body ng-app="app">
+
+    <div ng-controller="MainCtrl">
+        <h1>App name: {{app}}</h1>
+        
+        <form stripe:form="saveCustomer">
+            <p>Credit Card Number</p>
+            <input type="text" size="20" data-stripe="number"/>
+            <p>CVC</p>
+            <input type="text" size="4" data-stripe="cvc"/>
+            <p>Expiration Month</p>
+            <input type="text" size="2" data-stripe="exp-month"/>
+            <p>Expiration Year</p>
+            <input type="text" size="4" data-stripe="exp-year"/>
+            <button type="submit">Save</button>
+        </form>
+
+    </div>
+
+    <!-- Bower -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/stripe-angular/stripe-angular.js"></script>
+
+    <!-- Angular Scripts -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+
+</body>
+</html>
