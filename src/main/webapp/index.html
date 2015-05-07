@@ -2,37 +2,82 @@
 <html>
 <head>
     <title>Stripe Concept Test</title>
+    <!-- Stripe.js -->
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <!-- Angular.js -->
+    <script src="bower_components/angular/angular.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
 </head>
 <body ng-app="app">
 
-    <div ng-controller="MainCtrl">
-        <h1>App name: {{app}}</h1>
+    <div class="container" ng-controller="MainCtrl">
 
-        <h3>Token creation Info</h3>
-        <h3 ng-show="stripeMessage">{{stripeMessage}}</h3>
-        
-        <form stripe:form="saveCustomer">
-            <p>Credit Card Number
-            <input type="text" size="20" data-stripe="number"/></p>
-            <p>CVC
-            <input type="text" size="4" data-stripe="cvc"/></p>
-            <p>Expiration Month
-            <input type="text" size="2" data-stripe="exp-month"/></p>
-            <p>Expiration Year
-            <input type="text" size="4" data-stripe="exp-year"/></p>
-            <button type="submit">Pay!</button>
-        </form>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">
+                        <p>App name: {{app}}</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+
+                    <h1 class="text-center">Token Creation Info</h1>
+                    <h3 ng-show="stripeMessage">{{stripeMessage}}</h3>
+                    <br>
+                    <br>
+                    <form stripe:form="saveCustomer">
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-3"><p class="text-right">Credit Card Number</p></div>
+                            <div class="col-md-3">
+                                <input class="form-control" type="text" size="20" data-stripe="number"
+                                    value="4000000000000077" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-3"><p class="text-right">CVC</p></div>
+                            <div class="col-md-3">
+                                <input class="form-control" type="text" size="4" data-stripe="cvc" value="314" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-3"><p class="text-right">Expiration Month</p></div>
+                            <div class="col-md-3">
+                                <input class="form-control" type="text" size="2" data-stripe="exp-month" value="5" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-3"><p class="text-right">Expiration Year</p></div>
+                            <div class="col-md-3">
+                                <input class="form-control" type="text" size="4" data-stripe="exp-year" value="2016" />
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bower -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/stripe-angular/stripe-angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
     <!-- Angular Scripts -->
     <script src="scripts/app.js"></script>
