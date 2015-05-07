@@ -16,13 +16,13 @@ angular.module('app', ['stripe'])
         // this callback will be called asynchronously
         // when the response is available
 
-            $scope.stripeMessage = "Status: " + status + " Data: " + data.token;
+            $scope.stripeMessage = "Status: " + status + " Data: " + data.token + " Message: " + data.message;
         })
         . error(function(data, status, headers, config) {
         // called asynchronously if an error occurs
         // or server returns response with an error status.
         
-            $scope.stripeMessage = "Status: " + status + " Data: " + data.token;
+            $scope.stripeMessage = "Status: " + status + " Data: " + data.token + " Message: " + data.message;
         });
     };
 

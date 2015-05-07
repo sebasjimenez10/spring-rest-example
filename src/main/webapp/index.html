@@ -9,17 +9,19 @@
 
     <div ng-controller="MainCtrl">
         <h1>App name: {{app}}</h1>
-        <h3 ng-show="stripeMessage">Token creation status: {{stripeMessage}}</h3>
+
+        <h3>Token creation Info</h3>
+        <h3 ng-show="stripeMessage">{{stripeMessage}}</h3>
         
         <form stripe:form="saveCustomer">
-            <p>Credit Card Number</p>
-            <input type="text" size="20" data-stripe="number"/>
-            <p>CVC</p>
-            <input type="text" size="4" data-stripe="cvc"/>
-            <p>Expiration Month</p>
-            <input type="text" size="2" data-stripe="exp-month"/>
-            <p>Expiration Year</p>
-            <input type="text" size="4" data-stripe="exp-year"/>
+            <p>Credit Card Number
+            <input type="text" size="20" data-stripe="number"/></p>
+            <p>CVC
+            <input type="text" size="4" data-stripe="cvc"/></p>
+            <p>Expiration Month
+            <input type="text" size="2" data-stripe="exp-month"/></p>
+            <p>Expiration Year
+            <input type="text" size="4" data-stripe="exp-year"/></p>
             <button type="submit">Pay!</button>
         </form>
 
